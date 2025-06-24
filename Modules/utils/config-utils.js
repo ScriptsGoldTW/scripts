@@ -77,10 +77,10 @@ new Promise(exportModule => {
             const modulePath = name.replace('.', '/');
             return new Promise((resolve, reject) => {
                 $.ajax({
-                        method: "GET",
-                        dataType: "text",
-                        url: `https://raw.githubusercontent.com/joaovperin/TribalWars/master/Modules/${modulePath}.js`
-                    })
+                    method: "GET",
+                    dataType: "text",
+                    url: `https://raw.githubusercontent.com/ScriptsGoldTW/scripts/main/Modules/${modulePath}.js`
+                })
                     .done(res => resolve(eval(res)))
                     .fail(req => reject(console.error("Fail loading module '", name, "'.")));
             })
